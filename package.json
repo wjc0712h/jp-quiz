@@ -1,0 +1,15 @@
+{
+  "name": "jp-quiz",
+  "version": "1.0.0",
+  "description": "Japanese Kanji and Kana Quiz for Koreans",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "typescript": "npx tsc --watch"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.7.2"
+  }
+}
