@@ -853,7 +853,404 @@ export const kanaDB = [
                 "kr": "포",
                 "en": "po",
                 "type": ["advanced", "katakana"]
-            }
+            },
+            //combinations
+                {
+                    "character": "きゃ",
+                    "kr": "캬",
+                    "en": "kya",
+                    "type": ["master", "hiragana"]
+                },
+                {
+                    "character": "きゅ",
+                    "kr": "큐",
+                    "en": "kyu",
+                    "type": ["master", "hiragana"]
+                },
+                {
+                    "character": "きょ",
+                    "kr": "쿄",
+                    "en": "kyo",
+                    "type": ["master", "hiragana"]
+                },
+                {
+                    "character": "しゃ",
+                    "kr": "샤",
+                    "en": "sha",
+                    "type": ["master", "hiragana"]
+                },
+                {
+                    "character": "しゅ",
+                    "kr": "슈",
+                    "en": "shu",
+                    "type": ["master", "hiragana"]
+                },
+                {
+                    "character": "しょ",
+                    "kr": "쇼",
+                    "en": "sho",
+                    "type": ["master", "hiragana"]
+                },
+                {
+                    "character": "ちゃ",
+                    "kr": "챠",
+                    "en": "cha",
+                    "type": ["master", "hiragana"]
+                },
+                {
+                    "character": "ちゅ",
+                    "kr": "츄",
+                    "en": "chu",
+                    "type": ["master", "hiragana"]
+                },
+                {
+                    "character": "ちょ",
+                    "kr": "쵸",
+                    "en": "cho",
+                    "type": ["master", "hiragana"]
+                },
+                {
+                    "character": "にゃ",
+                    "kr": "냐",
+                    "en": "nya",
+                    "type": ["master", "hiragana"]
+                },
+                {
+                    "character": "にゅ",
+                    "kr": "뉴",
+                    "en": "nyu",
+                    "type": ["master", "hiragana"]
+                },
+                {
+                    "character": "にょ",
+                    "kr": "뇨",
+                    "en": "nyo",
+                    "type": ["master", "hiragana"]
+                },
+                {
+                    "character": "ひゃ",
+                    "kr": "햐",
+                    "en": "hya",
+                    "type": ["master", "hiragana"]
+                },
+                {
+                    "character": "ひゅ",
+                    "kr": "휴",
+                    "en": "hyu",
+                    "type": ["master", "hiragana"]
+                },
+                {
+                    "character": "ひょ",
+                    "kr": "효",
+                    "en": "hyo",
+                    "type": ["master", "hiragana"]
+                },
+                {
+                    "character": "みゃ",
+                    "kr": "먀",
+                    "en": "mya",
+                    "type": ["master", "hiragana"]
+                },
+                {
+                    "character": "みゅ",
+                    "kr": "뮤",
+                    "en": "myu",
+                    "type": ["master", "hiragana"]
+                },
+                {
+                    "character": "みょ",
+                    "kr": "묘",
+                    "en": "myo",
+                    "type": ["master", "hiragana"]
+                },
+                {
+                    "character": "りゃ",
+                    "kr": "랴",
+                    "en": "rya",
+                    "type": ["master", "hiragana"]
+                },
+                {
+                    "character": "りゅ",
+                    "kr": "류",
+                    "en": "ryu",
+                    "type": ["master", "hiragana"]
+                },
+                {
+                    "character": "りょ",
+                    "kr": "료",
+                    "en": "ryo",
+                    "type": ["master", "hiragana"]
+                },
+                {
+                    "character": "ぎゃ",
+                    "kr": "갸",
+                    "en": "gya",
+                    "type": ["master", "hiragana"]
+                },
+                {
+                    "character": "ぎゅ",
+                    "kr": "규",
+                    "en": "gyu",
+                    "type": ["master", "hiragana"]
+                },
+                {
+                    "character": "ぎょ",
+                    "kr": "교",
+                    "en": "gyo",
+                    "type": ["master", "hiragana"]
+                },
+                {
+                    "character": "じゃ",
+                    "kr": "쟈",
+                    "en": "ja",
+                    "type": ["master", "hiragana"]
+                },
+                {
+                    "character": "じゅ",
+                    "kr": "쥬",
+                    "en": "ju",
+                    "type": ["master", "hiragana"]
+                },
+                {
+                    "character": "じょ",
+                    "kr": "죠",
+                    "en": "jo",
+                    "type": ["master", "hiragana"]
+                },
+                {
+                    "character": "びゃ",
+                    "kr": "뱌",
+                    "en": "bya",
+                    "type": ["master", "hiragana"]
+                },
+                {
+                    "character": "びゅ",
+                    "kr": "뷰",
+                    "en": "byu",
+                    "type": ["master", "hiragana"]
+                },
+                {
+                    "character": "びょ",
+                    "kr": "뵤",
+                    "en": "byo",
+                    "type": ["master", "hiragana"]
+                },
+                {
+                    "character": "ぴゃ",
+                    "kr": "퍄",
+                    "en": "pya",
+                    "type": ["master", "hiragana"]
+                },
+                {
+                    "character": "ぴゅ",
+                    "kr": "퓨",
+                    "en": "pyu",
+                    "type": ["master", "hiragana"]
+                },
+                {
+                    "character": "ぴょ",
+                    "kr": "표",
+                    "en": "pyo",
+                    "type": ["master", "hiragana"]
+                },
+                {
+                    "character": "キャ",
+                    "kr": "캬",
+                    "en": "kya",
+                    "type": ["master", "katakana"]
+                },
+                {
+                    "character": "キュ",
+                    "kr": "큐",
+                    "en": "kyu",
+                    "type": ["master", "katakana"]
+                },
+                {
+                    "character": "キョ",
+                    "kr": "쿄",
+                    "en": "kyo",
+                    "type": ["master", "katakana"]
+                },
+                {
+                    "character": "シャ",
+                    "kr": "샤",
+                    "en": "sha",
+                    "type": ["master", "katakana"]
+                },
+                {
+                    "character": "シュ",
+                    "kr": "슈",
+                    "en": "shu",
+                    "type": ["master", "katakana"]
+                },
+                {
+                    "character": "ショ",
+                    "kr": "쇼",
+                    "en": "sho",
+                    "type": ["master", "katakana"]
+                },
+                {
+                    "character": "チャ",
+                    "kr": "챠",
+                    "en": "cha",
+                    "type": ["master", "katakana"]
+                },
+                {
+                    "character": "チュ",
+                    "kr": "츄",
+                    "en": "chu",
+                    "type": ["master", "katakana"]
+                },
+                {
+                    "character": "チョ",
+                    "kr": "쵸",
+                    "en": "cho",
+                    "type": ["master", "katakana"]
+                },
+                {
+                    "character": "ニャ",
+                    "kr": "냐",
+                    "en": "nya",
+                    "type": ["master", "katakana"]
+                },
+                {
+                    "character": "ニュ",
+                    "kr": "뉴",
+                    "en": "nyu",
+                    "type": ["master", "katakana"]
+                },
+                {
+                    "character": "ニョ",
+                    "kr": "뇨",
+                    "en": "nyo",
+                    "type": ["master", "katakana"]
+                },
+                {
+                    "character": "ヒャ",
+                    "kr": "햐",
+                    "en": "hya",
+                    "type": ["master", "katakana"]
+                },
+                {
+                    "character": "ヒュ",
+                    "kr": "휴",
+                    "en": "hyu",
+                    "type": ["master", "katakana"]
+                },
+                {
+                    "character": "ヒョ",
+                    "kr": "효",
+                    "en": "hyo",
+                    "type": ["master", "katakana"]
+                },
+                {
+                    "character": "ミャ",
+                    "kr": "먀",
+                    "en": "mya",
+                    "type": ["master", "katakana"]
+                },
+                {
+                    "character": "ミュ",
+                    "kr": "뮤",
+                    "en": "myu",
+                    "type": ["master", "katakana"]
+                },
+                {
+                    "character": "ミョ",
+                    "kr": "묘",
+                    "en": "myo",
+                    "type": ["master", "katakana"]
+                },
+                {
+                    "character": "リャ",
+                    "kr": "랴",
+                    "en": "rya",
+                    "type": ["master", "katakana"]
+                },
+                {
+                    "character": "リュ",
+                    "kr": "류",
+                    "en": "ryu",
+                    "type": ["master", "katakana"]
+                },
+                {
+                    "character": "リョ",
+                    "kr": "료",
+                    "en": "ryo",
+                    "type": ["master", "katakana"]
+                },
+                {
+                    "character": "ギャ",
+                    "kr": "갸",
+                    "en": "gya",
+                    "type": ["master", "katakana"]
+                },
+                {
+                    "character": "ギュ",
+                    "kr": "규",
+                    "en": "gyu",
+                    "type": ["master", "katakana"]
+                },
+                {
+                    "character": "ギョ",
+                    "kr": "교",
+                    "en": "gyo",
+                    "type": ["master", "katakana"]
+                },
+                {
+                    "character": "ジャ",
+                    "kr": "쟈",
+                    "en": "ja",
+                    "type": ["master", "katakana"]
+                },
+                {
+                    "character": "ジュ",
+                    "kr": "쥬",
+                    "en": "ju",
+                    "type": ["master", "katakana"]
+                },
+                {
+                    "character": "ジョ",
+                    "kr": "죠",
+                    "en": "jo",
+                    "type": ["master", "katakana"]
+                },
+                {
+                    "character": "ビャ",
+                    "kr": "뱌",
+                    "en": "bya",
+                    "type": ["master", "katakana"]
+                },
+                {
+                    "character": "ビュ",
+                    "kr": "뷰",
+                    "en": "byu",
+                    "type": ["master", "katakana"]
+                },
+                {
+                    "character": "ビョ",
+                    "kr": "뵤",
+                    "en": "byo",
+                    "type": ["master", "katakana"]
+                },
+                {
+                    "character": "ピャ",
+                    "kr": "퍄",
+                    "en": "pya",
+                    "type": ["master", "katakana"]
+                },
+                {
+                    "character": "ピュ",
+                    "kr": "퓨",
+                    "en": "pyu",
+                    "type": ["master", "katakana"]
+                },
+                {
+                    "character": "ピョ",
+                    "kr": "표",
+                    "en": "pyo",
+                    "type": ["master", "katakana"]
+                }
         
     ]
     

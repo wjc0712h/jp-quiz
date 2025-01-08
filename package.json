@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "jp-quiz",
   "version": "1.0.0",
   "description": "Japanese Kanji and Kana Quiz for Koreans",
