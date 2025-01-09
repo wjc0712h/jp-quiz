@@ -5,7 +5,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     background-color: #f4f4f4;
   }
   
@@ -13,7 +12,9 @@ body {
     font-size: 2rem;
     color: #333;
   }
-
+  h6 {
+    margin-bottom: 10px;
+  }
 
   #practice-buttons {
     display: flex;
@@ -39,7 +40,6 @@ body {
   #practice-options {
     display: flex;
     justify-content: space-around;
-    margin: 20px 0;
   }
   
   #practice-options button {
@@ -58,4 +58,70 @@ body {
   #practice-options .selected {
     background-color: #44014b;
     border-color: #44014b;
+  }
+  #grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto; /* Center the grid */
+  }
+  
+  .card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 1.1rem;
+  }
+  
+  .card p {
+    margin: 10px 0;
+    font-size: 3rem;
+    color: #333;
+  }
+  
+ 
+  
+  .card input:focus {
+    border-color: #7b0089;
+  }
+  
+  #kana-quiz a {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    color: #7b0089;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  #kana-quiz a:hover {
+    color: #60006b;
+  }
+  
+  .card.correct {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+  }
+  .card.wrong {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+  }
+
+  /* responsive */
+  @media (max-width: 768px) {
+    #grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets and smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #grid {
+      grid-template-columns: 1fr; /* 1 column for mobile screens */
+    }
   }

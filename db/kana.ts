@@ -557,699 +557,699 @@ export const kanaDB = [
                 "character": "が",
                 "kr": "가",
                 "en": "ga",
-                 "type": ["advanced", "hiragana"]
+                 "type": ["dakuten", "hiragana"]
             },
             {
                 "character": "ぎ",
                 "kr": "기",
                 "en": "gi",
-                 "type": ["advanced", "hiragana"]
+                 "type": ["dakuten", "hiragana"]
             },
             {
                 "character": "ぐ",
                 "kr": "구",
                 "en": "gu",
-                 "type": ["advanced", "hiragana"]
+                 "type": ["dakuten", "hiragana"]
             },
             {
                 "character": "げ",
 
                 "kr": "게",
                 "en": "ge",
-                 "type": ["advanced", "hiragana"]
+                 "type": ["dakuten", "hiragana"]
             },
             {
                 "character": "ご",
                 "kr": "고",
                 "en": "go",
-                 "type": ["advanced", "hiragana"]
+                 "type": ["dakuten", "hiragana"]
             },
             {
                 "character": "ざ",
                 "kr": "자",
                 "en": "za",
-                 "type": ["advanced", "hiragana"]
+                 "type": ["dakuten", "hiragana"]
             },
             {
                 "character": "じ",
                 "kr": "지",
                 "en": "ji",
-                 "type": ["advanced", "hiragana"]
+                 "type": ["dakuten", "hiragana"]
             },
             {
                 "character": "ず",
                 "kr": "즈",
                 "en": "zu",
-                 "type": ["advanced", "hiragana"]
+                 "type": ["dakuten", "hiragana"]
             },
             {
                 "character": "ぜ",
                 "kr": "제",
                 "en": "ze",
-                 "type": ["advanced", "hiragana"]
+                 "type": ["dakuten", "hiragana"]
             },
             {
                 "character": "ぞ",
                 "kr": "조",
                 "en": "zo",
-                 "type": ["advanced", "hiragana"]
+                 "type": ["dakuten", "hiragana"]
             },
             {
                 "character": "だ",
                 "kr": "다",
                 "en": "da",
-                 "type": ["advanced", "hiragana"]
+                 "type": ["dakuten", "hiragana"]
             },
             {
                 "character": "ぢ",
                 "kr": "지",
                 "en": "ji",
-                 "type": ["advanced", "hiragana"]
+                 "type": ["dakuten", "hiragana"]
             },
             {
                 "character": "づ",
                 "kr": "즈",
                 "en": "zu",
-                 "type": ["advanced", "hiragana"]
+                 "type": ["dakuten", "hiragana"]
             },
             {
                 "character": "で",
                 "kr": "데",
                 "en": "de",
-                 "type": ["advanced", "hiragana"]
+                 "type": ["dakuten", "hiragana"]
             },
             {
                 "character": "ど",
                 "kr": "도",
                 "en": "do",
-                 "type": ["advanced", "hiragana"]
+                 "type": ["dakuten", "hiragana"]
             },
             {
                 "character": "ば",
                 "kr": "바",
                 "en": "ba",
-                 "type": ["advanced", "hiragana"]
+                 "type": ["dakuten", "hiragana"]
             },
             {
                 "character": "び",
                 "kr": "비",
                 "en": "bi",
-                 "type": ["advanced", "hiragana"]
+                 "type": ["dakuten", "hiragana"]
             },
             {
                 "character": "ぶ",
                 "kr": "부",
                 "en": "bu",
-                 "type": ["advanced", "hiragana"]
+                 "type": ["dakuten", "hiragana"]
             },
             {
                 "character": "べ",
                 "kr": "베",
                 "en": "be",
-                 "type": ["advanced", "hiragana"]
+                 "type": ["dakuten", "hiragana"]
             },
             {
                 "character": "ぼ",
                 "kr": "보",
                 "en": "bo",
-                 "type": ["advanced", "hiragana"]
+                 "type": ["dakuten", "hiragana"]
             },
             {
                 "character": "ぱ",
                 "kr": "파",
                 "en": "pa",
-                 "type": ["advanced", "hiragana"]
+                 "type": ["dakuten", "hiragana"]
             },
             {
                 "character": "ぴ",
                 "kr": "피",
                 "en": "pi",
-                 "type": ["advanced", "hiragana"]
+                 "type": ["dakuten", "hiragana"]
             },
             {
                 "character": "ぷ",
                 "kr": "푸",
                 "en": "pu",
-                 "type": ["advanced", "hiragana"]
+                 "type": ["dakuten", "hiragana"]
             },
             {
                 "character": "ぺ",
                 "kr": "페",
                 "en": "pe",
-                 "type": ["advanced", "hiragana"]
+                 "type": ["dakuten", "hiragana"]
             },
             {
                 "character": "ぽ",
                 "kr": "포",
                 "en": "po",
-                 "type": ["advanced", "hiragana"]
+                 "type": ["dakuten", "hiragana"]
             },
             {
                 "character": "ガ",
                 "kr": "가",
                 "en": "ga",
-                "type": ["advanced", "katakana"]
+                "type": ["dakuten", "katakana"]
             },
             {
                 "character": "ギ",
                 "kr": "기",
                 "en": "gi",
-                "type": ["advanced", "katakana"]
+                "type": ["dakuten", "katakana"]
             },
             {
                 "character": "グ",
                 "kr": "구",
                 "en": "gu",
-                "type": ["advanced", "katakana"]
+                "type": ["dakuten", "katakana"]
             },
             {
                 "character": "ゲ",
                 "kr": "게",
                 "en": "ge",
-                "type": ["advanced", "katakana"]
+                "type": ["dakuten", "katakana"]
             },
             {
                 "character": "ゴ",
                 "kr": "고",
                 "en": "go",
-                "type": ["advanced", "katakana"]
+                "type": ["dakuten", "katakana"]
             },
             {
                 "character": "ザ",
                 "kr": "자",
                 "en": "za",
-                "type": ["advanced", "katakana"]
+                "type": ["dakuten", "katakana"]
             },
             {
                 "character": "ジ",
                 "kr": "지",
                 "en": "ji",
-                "type": ["advanced", "katakana"]
+                "type": ["dakuten", "katakana"]
             },
             {
                 "character": "ズ",
                 "kr": "즈",
                 "en": "zu",
-                "type": ["advanced", "katakana"]
+                "type": ["dakuten", "katakana"]
             },
             {
                 "character": "ゼ",
                 "kr": "제",
                 "en": "ze",
-                "type": ["advanced", "katakana"]
+                "type": ["dakuten", "katakana"]
             },
             {
                 "character": "ゾ",
                 "kr": "조",
                 "en": "zo",
-                "type": ["advanced", "katakana"]
+                "type": ["dakuten", "katakana"]
             },
             {
                 "character": "ダ",
                 "kr": "다",
                 "en": "da",
-                "type": ["advanced", "katakana"]
+                "type": ["dakuten", "katakana"]
             },
             {
                 "character": "ヂ",
                 "kr": "지",
                 "en": "ji",
-                "type": ["advanced", "katakana"]
+                "type": ["dakuten", "katakana"]
             },
             {
                 "character": "ヅ",
                 "kr": "즈",
                 "en": "zu",
-                "type": ["advanced", "katakana"]
+                "type": ["dakuten", "katakana"]
             },
             {
                 "character": "デ",
                 "kr": "데",
                 "en": "de",
-                "type": ["advanced", "katakana"]
+                "type": ["dakuten", "katakana"]
             },
             {
                 "character": "ド",
                 "kr": "도",
                 "en": "do",
-                "type": ["advanced", "katakana"]
+                "type": ["dakuten", "katakana"]
             },
             {
                 "character": "バ",
                 "kr": "바",
                 "en": "ba",
-                "type": ["advanced", "katakana"]
+                "type": ["dakuten", "katakana"]
             },
             {
                 "character": "ビ",
                 "kr": "비",
                 "en": "bi",
-                "type": ["advanced", "katakana"]
+                "type": ["dakuten", "katakana"]
             },
             {
                 "character": "ブ",
                 "kr": "부",
                 "en": "bu",
-                "type": ["advanced", "katakana"]
+                "type": ["dakuten", "katakana"]
             },
             {
                 "character": "ベ",
                 "kr": "베",
                 "en": "be",
-                "type": ["advanced", "katakana"]
+                "type": ["dakuten", "katakana"]
             },
             {
                 "character": "ボ",
                 "kr": "보",
                 "en": "bo",
-                "type": ["advanced", "katakana"]
+                "type": ["dakuten", "katakana"]
             },
             {
                 "character": "パ",
                 "kr": "파",
                 "en": "pa",
-                "type": ["advanced", "katakana"]
+                "type": ["dakuten", "katakana"]
             },
             {
                 "character": "ピ",
                 "kr": "피",
                 "en": "pi",
-                "type": ["advanced", "katakana"]
+                "type": ["dakuten", "katakana"]
             },
             {
                 "character": "プ",
                 "kr": "푸",
                 "en": "pu",
-                "type": ["advanced", "katakana"]
+                "type": ["dakuten", "katakana"]
             },
             {
                 "character": "ペ",
                 "kr": "페",
                 "en": "pe",
-                "type": ["advanced", "katakana"]
+                "type": ["dakuten", "katakana"]
             },
             {
                 "character": "ポ",
                 "kr": "포",
                 "en": "po",
-                "type": ["advanced", "katakana"]
+                "type": ["dakuten", "katakana"]
             },
             //combinations
                 {
                     "character": "きゃ",
                     "kr": "캬",
                     "en": "kya",
-                    "type": ["master", "hiragana"]
+                    "type": ["combinations", "hiragana"]
                 },
                 {
                     "character": "きゅ",
                     "kr": "큐",
                     "en": "kyu",
-                    "type": ["master", "hiragana"]
+                    "type": ["combinations", "hiragana"]
                 },
                 {
                     "character": "きょ",
                     "kr": "쿄",
                     "en": "kyo",
-                    "type": ["master", "hiragana"]
+                    "type": ["combinations", "hiragana"]
                 },
                 {
                     "character": "しゃ",
                     "kr": "샤",
                     "en": "sha",
-                    "type": ["master", "hiragana"]
+                    "type": ["combinations", "hiragana"]
                 },
                 {
                     "character": "しゅ",
                     "kr": "슈",
                     "en": "shu",
-                    "type": ["master", "hiragana"]
+                    "type": ["combinations", "hiragana"]
                 },
                 {
                     "character": "しょ",
                     "kr": "쇼",
                     "en": "sho",
-                    "type": ["master", "hiragana"]
+                    "type": ["combinations", "hiragana"]
                 },
                 {
                     "character": "ちゃ",
                     "kr": "챠",
                     "en": "cha",
-                    "type": ["master", "hiragana"]
+                    "type": ["combinations", "hiragana"]
                 },
                 {
                     "character": "ちゅ",
                     "kr": "츄",
                     "en": "chu",
-                    "type": ["master", "hiragana"]
+                    "type": ["combinations", "hiragana"]
                 },
                 {
                     "character": "ちょ",
                     "kr": "쵸",
                     "en": "cho",
-                    "type": ["master", "hiragana"]
+                    "type": ["combinations", "hiragana"]
                 },
                 {
                     "character": "にゃ",
                     "kr": "냐",
                     "en": "nya",
-                    "type": ["master", "hiragana"]
+                    "type": ["combinations", "hiragana"]
                 },
                 {
                     "character": "にゅ",
                     "kr": "뉴",
                     "en": "nyu",
-                    "type": ["master", "hiragana"]
+                    "type": ["combinations", "hiragana"]
                 },
                 {
                     "character": "にょ",
                     "kr": "뇨",
                     "en": "nyo",
-                    "type": ["master", "hiragana"]
+                    "type": ["combinations", "hiragana"]
                 },
                 {
                     "character": "ひゃ",
                     "kr": "햐",
                     "en": "hya",
-                    "type": ["master", "hiragana"]
+                    "type": ["combinations", "hiragana"]
                 },
                 {
                     "character": "ひゅ",
                     "kr": "휴",
                     "en": "hyu",
-                    "type": ["master", "hiragana"]
+                    "type": ["combinations", "hiragana"]
                 },
                 {
                     "character": "ひょ",
                     "kr": "효",
                     "en": "hyo",
-                    "type": ["master", "hiragana"]
+                    "type": ["combinations", "hiragana"]
                 },
                 {
                     "character": "みゃ",
                     "kr": "먀",
                     "en": "mya",
-                    "type": ["master", "hiragana"]
+                    "type": ["combinations", "hiragana"]
                 },
                 {
                     "character": "みゅ",
                     "kr": "뮤",
                     "en": "myu",
-                    "type": ["master", "hiragana"]
+                    "type": ["combinations", "hiragana"]
                 },
                 {
                     "character": "みょ",
                     "kr": "묘",
                     "en": "myo",
-                    "type": ["master", "hiragana"]
+                    "type": ["combinations", "hiragana"]
                 },
                 {
                     "character": "りゃ",
                     "kr": "랴",
                     "en": "rya",
-                    "type": ["master", "hiragana"]
+                    "type": ["combinations", "hiragana"]
                 },
                 {
                     "character": "りゅ",
                     "kr": "류",
                     "en": "ryu",
-                    "type": ["master", "hiragana"]
+                    "type": ["combinations", "hiragana"]
                 },
                 {
                     "character": "りょ",
                     "kr": "료",
                     "en": "ryo",
-                    "type": ["master", "hiragana"]
+                    "type": ["combinations", "hiragana"]
                 },
                 {
                     "character": "ぎゃ",
                     "kr": "갸",
                     "en": "gya",
-                    "type": ["master", "hiragana"]
+                    "type": ["combinations", "hiragana"]
                 },
                 {
                     "character": "ぎゅ",
                     "kr": "규",
                     "en": "gyu",
-                    "type": ["master", "hiragana"]
+                    "type": ["combinations", "hiragana"]
                 },
                 {
                     "character": "ぎょ",
                     "kr": "교",
                     "en": "gyo",
-                    "type": ["master", "hiragana"]
+                    "type": ["combinations", "hiragana"]
                 },
                 {
                     "character": "じゃ",
                     "kr": "쟈",
                     "en": "ja",
-                    "type": ["master", "hiragana"]
+                    "type": ["combinations", "hiragana"]
                 },
                 {
                     "character": "じゅ",
                     "kr": "쥬",
                     "en": "ju",
-                    "type": ["master", "hiragana"]
+                    "type": ["combinations", "hiragana"]
                 },
                 {
                     "character": "じょ",
                     "kr": "죠",
                     "en": "jo",
-                    "type": ["master", "hiragana"]
+                    "type": ["combinations", "hiragana"]
                 },
                 {
                     "character": "びゃ",
                     "kr": "뱌",
                     "en": "bya",
-                    "type": ["master", "hiragana"]
+                    "type": ["combinations", "hiragana"]
                 },
                 {
                     "character": "びゅ",
                     "kr": "뷰",
                     "en": "byu",
-                    "type": ["master", "hiragana"]
+                    "type": ["combinations", "hiragana"]
                 },
                 {
                     "character": "びょ",
                     "kr": "뵤",
                     "en": "byo",
-                    "type": ["master", "hiragana"]
+                    "type": ["combinations", "hiragana"]
                 },
                 {
                     "character": "ぴゃ",
                     "kr": "퍄",
                     "en": "pya",
-                    "type": ["master", "hiragana"]
+                    "type": ["combinations", "hiragana"]
                 },
                 {
                     "character": "ぴゅ",
                     "kr": "퓨",
                     "en": "pyu",
-                    "type": ["master", "hiragana"]
+                    "type": ["combinations", "hiragana"]
                 },
                 {
                     "character": "ぴょ",
                     "kr": "표",
                     "en": "pyo",
-                    "type": ["master", "hiragana"]
+                    "type": ["combinations", "hiragana"]
                 },
                 {
                     "character": "キャ",
                     "kr": "캬",
                     "en": "kya",
-                    "type": ["master", "katakana"]
+                    "type": ["combinations", "katakana"]
                 },
                 {
                     "character": "キュ",
                     "kr": "큐",
                     "en": "kyu",
-                    "type": ["master", "katakana"]
+                    "type": ["combinations", "katakana"]
                 },
                 {
                     "character": "キョ",
                     "kr": "쿄",
                     "en": "kyo",
-                    "type": ["master", "katakana"]
+                    "type": ["combinations", "katakana"]
                 },
                 {
                     "character": "シャ",
                     "kr": "샤",
                     "en": "sha",
-                    "type": ["master", "katakana"]
+                    "type": ["combinations", "katakana"]
                 },
                 {
                     "character": "シュ",
                     "kr": "슈",
                     "en": "shu",
-                    "type": ["master", "katakana"]
+                    "type": ["combinations", "katakana"]
                 },
                 {
                     "character": "ショ",
                     "kr": "쇼",
                     "en": "sho",
-                    "type": ["master", "katakana"]
+                    "type": ["combinations", "katakana"]
                 },
                 {
                     "character": "チャ",
                     "kr": "챠",
                     "en": "cha",
-                    "type": ["master", "katakana"]
+                    "type": ["combinations", "katakana"]
                 },
                 {
                     "character": "チュ",
                     "kr": "츄",
                     "en": "chu",
-                    "type": ["master", "katakana"]
+                    "type": ["combinations", "katakana"]
                 },
                 {
                     "character": "チョ",
                     "kr": "쵸",
                     "en": "cho",
-                    "type": ["master", "katakana"]
+                    "type": ["combinations", "katakana"]
                 },
                 {
                     "character": "ニャ",
                     "kr": "냐",
                     "en": "nya",
-                    "type": ["master", "katakana"]
+                    "type": ["combinations", "katakana"]
                 },
                 {
                     "character": "ニュ",
                     "kr": "뉴",
                     "en": "nyu",
-                    "type": ["master", "katakana"]
+                    "type": ["combinations", "katakana"]
                 },
                 {
                     "character": "ニョ",
                     "kr": "뇨",
                     "en": "nyo",
-                    "type": ["master", "katakana"]
+                    "type": ["combinations", "katakana"]
                 },
                 {
                     "character": "ヒャ",
                     "kr": "햐",
                     "en": "hya",
-                    "type": ["master", "katakana"]
+                    "type": ["combinations", "katakana"]
                 },
                 {
                     "character": "ヒュ",
                     "kr": "휴",
                     "en": "hyu",
-                    "type": ["master", "katakana"]
+                    "type": ["combinations", "katakana"]
                 },
                 {
                     "character": "ヒョ",
                     "kr": "효",
                     "en": "hyo",
-                    "type": ["master", "katakana"]
+                    "type": ["combinations", "katakana"]
                 },
                 {
                     "character": "ミャ",
                     "kr": "먀",
                     "en": "mya",
-                    "type": ["master", "katakana"]
+                    "type": ["combinations", "katakana"]
                 },
                 {
                     "character": "ミュ",
                     "kr": "뮤",
                     "en": "myu",
-                    "type": ["master", "katakana"]
+                    "type": ["combinations", "katakana"]
                 },
                 {
                     "character": "ミョ",
                     "kr": "묘",
                     "en": "myo",
-                    "type": ["master", "katakana"]
+                    "type": ["combinations", "katakana"]
                 },
                 {
                     "character": "リャ",
                     "kr": "랴",
                     "en": "rya",
-                    "type": ["master", "katakana"]
+                    "type": ["combinations", "katakana"]
                 },
                 {
                     "character": "リュ",
                     "kr": "류",
                     "en": "ryu",
-                    "type": ["master", "katakana"]
+                    "type": ["combinations", "katakana"]
                 },
                 {
                     "character": "リョ",
                     "kr": "료",
                     "en": "ryo",
-                    "type": ["master", "katakana"]
+                    "type": ["combinations", "katakana"]
                 },
                 {
                     "character": "ギャ",
                     "kr": "갸",
                     "en": "gya",
-                    "type": ["master", "katakana"]
+                    "type": ["combinations", "katakana"]
                 },
                 {
                     "character": "ギュ",
                     "kr": "규",
                     "en": "gyu",
-                    "type": ["master", "katakana"]
+                    "type": ["combinations", "katakana"]
                 },
                 {
                     "character": "ギョ",
                     "kr": "교",
                     "en": "gyo",
-                    "type": ["master", "katakana"]
+                    "type": ["combinations", "katakana"]
                 },
                 {
                     "character": "ジャ",
                     "kr": "쟈",
                     "en": "ja",
-                    "type": ["master", "katakana"]
+                    "type": ["combinations", "katakana"]
                 },
                 {
                     "character": "ジュ",
                     "kr": "쥬",
                     "en": "ju",
-                    "type": ["master", "katakana"]
+                    "type": ["combinations", "katakana"]
                 },
                 {
                     "character": "ジョ",
                     "kr": "죠",
                     "en": "jo",
-                    "type": ["master", "katakana"]
+                    "type": ["combinations", "katakana"]
                 },
                 {
                     "character": "ビャ",
                     "kr": "뱌",
                     "en": "bya",
-                    "type": ["master", "katakana"]
+                    "type": ["combinations", "katakana"]
                 },
                 {
                     "character": "ビュ",
                     "kr": "뷰",
                     "en": "byu",
-                    "type": ["master", "katakana"]
+                    "type": ["combinations", "katakana"]
                 },
                 {
                     "character": "ビョ",
                     "kr": "뵤",
                     "en": "byo",
-                    "type": ["master", "katakana"]
+                    "type": ["combinations", "katakana"]
                 },
                 {
                     "character": "ピャ",
                     "kr": "퍄",
                     "en": "pya",
-                    "type": ["master", "katakana"]
+                    "type": ["combinations", "katakana"]
                 },
                 {
                     "character": "ピュ",
                     "kr": "퓨",
                     "en": "pyu",
-                    "type": ["master", "katakana"]
+                    "type": ["combinations", "katakana"]
                 },
                 {
                     "character": "ピョ",
                     "kr": "표",
                     "en": "pyo",
-                    "type": ["master", "katakana"]
+                    "type": ["combinations", "katakana"]
                 }
         
     ]
