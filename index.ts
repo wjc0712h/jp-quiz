@@ -1,5 +1,5 @@
 import { kanaDB } from './db/kana.js';
-
+import { kanjiDB} from './db/kanji.js';
 
 document.addEventListener("DOMContentLoaded", () => {
   window.location.hash = '';
@@ -161,14 +161,108 @@ document.addEventListener("DOMContentLoaded", () => {
           <button id="practice-kanji">fourth year</button>
           <button id="practice-kanji">fifth year</button>
           <button id="practice-kanji">sixth year</button>
-        </div>`
-        // <h6>options</h6>
-        // <div id="practice-options">
-        //   <button id="practice-basics" class='selected'>basics</button>
-        //   <button id="practice-dakuten">dakuten</button>
-        //   <button id="practice-combination">combinations</button>
-        //   <button id="practice-all">all</button>
-        // </div>
+        </div>
+         <button id="kanji-start">START</button>
+         `
+         function StartQuiz() {
+          let hash = window.location.href.split('#')[1];
+          if(hash == null || hash == '')
+            hash = "first"
+          
+          const hashToNumber = (ordinal: string): string | undefined => {
+            const hashs = ["first", "second", "third", "fourth", "fifth", "sixth", "S"];
+            const index = hashs.indexOf(ordinal.toLowerCase());
+            return index !== -1 ? (index + 1).toString() : undefined;
+          };
+          
+      
+          let kanjiblocks = kanjiDB.filter((kanji) => kanji.grade === hashToNumber(hash));
+          //blocks = shuffleArray(blocks)
+          //console.log(kanjiblocks);
+          
+          let gridHTML = `<div id="grid">`;
+          kanjiblocks.forEach((block: any, index: any) => {
+            let umdok = (block.umdok != null) ? block.umdok : ''
+            let hundok = (block.hundok != null) ? block.hundok : ''
+              gridHTML += `
+                  <div id="card-${index}" class="card">
+                      <div>${index+1}</div>
+                      <p>${block.character}</p>
+                      <div>
+                      <span>${umdok}</span>
+                      <span>${hundok}</span>
+                      </div>
+                      <input type="text" id="guess-${index}" autocomplete="off" placeholder="">
+                 </div>
+              `;
+          });
+          gridHTML += `</div>`;
+      
+      // Update main content
+      main.innerHTML = `
+        <div id="kana-quiz">
+        ${gridHTML}
+        <button id="submit-quiz">Submit</button>
+        <a id="back-menu"href="">Menu</a>
+        </div>
+      `;
+      let wrongCounter = 0;
+      let correctCount = 0;
+      let emptyCounter = 0;
+      kanjiblocks.forEach((block: any, index: any) => {
+        const input = document.getElementById(`guess-${index}`) as HTMLInputElement;
+        const card = document.getElementById(`card-${index}`);
+    
+        input.addEventListener('blur', () => {
+          const userGuess = input.value.trim().toLowerCase();
+          console.log(userGuess)
+          if ((userGuess === block.meaningKR || userGuess === block.meaningKR) || (userGuess === block.meaningEN || userGuess === block.meaningEN)) {
+            card?.classList.add("correct");
+            card?.classList.remove("wrong");
+            correctCount += 1;
+          } else if (userGuess != '') {
+            card?.classList.add("wrong");
+            card?.classList.remove("correct");
+            wrongCounter += 1;
+          }
+        });
+      });
+      function displayResults(block:any, wrongCount: number, correctCount: number, emptyCounter: number) {
+        let resultHTML = 
+        `
+        <h1>SCORE: ${((block.length-wrongCount-emptyCounter)/block.length * 100).toFixed(2)}%</h1>
+        <h6>wrong: ${wrongCount}/<span style="font-size: 1rem">${block.length}</span></h2>
+        <h6>correct: ${correctCount}/<span style="font-size: 1rem">${block.length}</span></h2>
+        <h6>not answered: ${emptyCounter}/<span style="font-size: 1rem">${block.length}</span></h2>
+        <a id="back-menu"href="">Menu</a>
+
+        `;
+        main.innerHTML = resultHTML;
+      }
+      document.getElementById("submit-quiz")!.addEventListener("click", () => {
+        kanjiblocks.forEach((block: any, index: any) => {
+          const input = document.getElementById(`guess-${index}`) as HTMLInputElement;
+          if (input.value == null || input.value == '') {
+            emptyCounter += 1
+          } 
+        })
+        displayResults(kanjiblocks, wrongCounter, correctCount, emptyCounter);
+      })
+    }
+        //kanji options (grade)
+        const grade_btn = document.getElementById("practice-buttons")?.querySelectorAll("*")!;
+        grade_btn.forEach((button) => {
+          button.addEventListener("click", () => {
+            grade_btn.forEach((btn) => btn.classList.remove("selected"));
+      
+            button.classList.add("selected");
+            window.location.hash = '';
+            window.location.hash = button.textContent!.trim().split(' ')[0];
+          });
+        });
+        document.getElementById("kanji-start")!.addEventListener("click",() => {
+          StartQuiz()
+        })
   }
   kanaMain()
 }

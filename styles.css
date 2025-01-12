@@ -183,3 +183,36 @@ body {
     transform: translateY(-1px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
   }
+  #practice-buttons .selected {
+    background-color: #44014b;
+    border-color: #44014b;
+  }
+  #kanji-start {
+    padding: 10px 20px;
+    margin: 0px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 1px solid #7b0089;
+    background-color: #7b0089;
+    color: white;
+    border-radius: 5px;
+  }
+  #kanji-start:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  #submit-quiz {
+    float: left;
+    font-size: 0.8rem;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 15px;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+  #submit-quiz:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  }
