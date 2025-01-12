@@ -8,8 +8,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function MainMenu () {
     main.innerHTML = `
-        <h2><button id="kana-btn">Kana</button></h2>
-        <h2><button id="kanji-btn">Kanji</button></h2>
+        <div class="container">
+    <header>
+      <h1 class="main-title">Quiz</h1>
+    </header>
+    <div class="button-container">
+      <h2><button id="kana-btn" class="styled-button">Kana</button></h2>
+      <h2><button id="kanji-btn" class="styled-button">Kanji</button></h2>
+    </div>
+  </div>
       `;
   }
   /*
@@ -71,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <h2>${str}</h2>
         ${gridHTML}
         <button id="submit-quiz">Submit</button>
-        <a href="">Menu</a>
+        <a id="back-menu"href="">Menu</a>
         </div>
       `;
       let wrongCounter = 0;
@@ -103,7 +110,8 @@ document.addEventListener("DOMContentLoaded", () => {
         <h6>wrong: ${wrongCount}/<span style="font-size: 1rem">${block.length}</span></h2>
         <h6>correct: ${correctCount}/<span style="font-size: 1rem">${block.length}</span></h2>
         <h6>not answered: ${emptyCounter}/<span style="font-size: 1rem">${block.length}</span></h2>
-        <a href="">Menu</a>
+        <a id="back-menu"href="">Menu</a>
+
         `;
         main.innerHTML = resultHTML;
       }

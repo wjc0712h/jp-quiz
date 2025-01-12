@@ -1,3 +1,5 @@
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -16,6 +18,46 @@ body {
     margin-bottom: 10px;
   }
 
+  /*
+  main menu 
+  */
+
+
+.container {
+  text-align: center;
+  background: #fff;
+  padding: 100px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.main-title {
+  font-size: 3rem;
+  color: #333;
+  text-transform: uppercase;
+  margin: 0;
+  border-bottom: 2px solid ;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.styled-button {
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(90deg, #7b0089, #cb11ac);
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.styled-button:hover {
+  background: linear-gradient(90deg, #ff9a9e, #fad0c4);
+  transform: translateY(-1px);
+}
+
+/* kana quiz*/
   #practice-buttons {
     display: flex;
     justify-content: space-around;
@@ -53,6 +95,7 @@ body {
   }
   #practice-options button:hover {
     background-color: #60006b;
+    transform: translateY(-1px);
   }
   
   #practice-options .selected {
@@ -124,4 +167,19 @@ body {
     #grid {
       grid-template-columns: 1fr; /* 1 column for mobile screens */
     }
+  }
+  /* kanji quiz */
+  #back-menu {
+    float: right;
+    font-size: 0.8rem;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 15px;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+  #back-menu:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
   }
