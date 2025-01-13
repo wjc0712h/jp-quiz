@@ -151,7 +151,7 @@ document.addEventListener("DOMContentLoaded", () => {
   Kanji
   */
   function kanjiQuiz() {
-    function kanaMain() {
+    function kanjiMain() {
       main.innerHTML = `
         <h2>kanji quiz</h2>
         <div id="practice-buttons">
@@ -162,8 +162,30 @@ document.addEventListener("DOMContentLoaded", () => {
           <button id="practice-kanji">fifth year</button>
           <button id="practice-kanji">sixth year</button>
         </div>
+        <div id="practice-options">
+          <div class="toggle-container">
+            <label class="toggle">
+              <input  id="helper" type="checkbox" />
+              <span class="slider"></span>
+          </label>
+          <span class="toggle-label">helper</span>
+        </div>
          <button id="kanji-start">START</button>
+        </div>
          `
+         let helper = false;
+         console.log(helper);
+         let helper_toggle = document.querySelector("input[id=helper]");          
+         if (helper_toggle) {
+           helper_toggle.addEventListener('change', function (this: HTMLInputElement) {
+               if (this.checked) {
+                   helper = true;
+               } else {
+                   helper = false;
+               }
+               //console.log(helper);
+           });
+       }
          function StartQuiz() {
           let hash = window.location.href.split('#')[1];
           if(hash == null || hash == '')
@@ -175,13 +197,15 @@ document.addEventListener("DOMContentLoaded", () => {
             return index !== -1 ? (index + 1).toString() : undefined;
           };
           
-      
           let kanjiblocks = kanjiDB.filter((kanji) => kanji.grade === hashToNumber(hash));
           //blocks = shuffleArray(blocks)
           //console.log(kanjiblocks);
           
           let gridHTML = `<div id="grid">`;
           kanjiblocks.forEach((block: any, index: any) => {
+            let placeholder = ''
+            if(helper)
+              placeholder = block.meaningKR.split(' ')[0]
             let umdok = (block.umdok != null) ? block.umdok : ''
             let hundok = (block.hundok != null) ? block.hundok : ''
               gridHTML += `
@@ -192,7 +216,7 @@ document.addEventListener("DOMContentLoaded", () => {
                       <span>${umdok}</span>
                       <span>${hundok}</span>
                       </div>
-                      <input type="text" id="guess-${index}" autocomplete="off" placeholder="">
+                      <input type="text" id="guess-${index}" autocomplete="off" placeholder="${placeholder}">
                  </div>
               `;
           });
@@ -264,7 +288,7 @@ document.addEventListener("DOMContentLoaded", () => {
           StartQuiz()
         })
   }
-  kanaMain()
+  kanjiMain()
 }
   
   

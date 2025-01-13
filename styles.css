@@ -60,13 +60,13 @@ body {
 /* kana quiz*/
   #practice-buttons {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     margin: 20px 0px;
   }
   
   #practice-buttons button {
     padding: 10px 20px;
-    margin: 0px 20px;
+    margin: 10px 20px;
     font-size: 1rem;
     cursor: pointer;
     border: 1px solid #7b0089;
@@ -81,11 +81,15 @@ body {
 
   #practice-options {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
   }
   
   #practice-options button {
-    padding: 10px 20px;
+
+    width: 50%;
+    padding: 5px;
+    margin: 5px 10px;
     font-size: 1rem;
     cursor: pointer;
     border: 1px solid #7b0089;
@@ -169,6 +173,7 @@ body {
     }
   }
   /* kanji quiz */
+
   #back-menu {
     float: right;
     font-size: 0.8rem;
@@ -216,3 +221,61 @@ body {
     transform: translateY(-1px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
   }
+  /* Toggle Container */
+.toggle-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 13px;
+}
+
+/* Toggle */
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 15px;
+}
+
+.toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.3s;
+  border-radius: 15px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 11px;
+  width: 11px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #7b0089;
+}
+
+input:checked + .slider:before {
+  transform: translateX(15px);
+}
+
+.toggle-label {
+  font-size: 0.9rem;
+  color: #333;
+}
