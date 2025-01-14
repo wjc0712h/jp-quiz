@@ -2,4 +2,4 @@
 
 **Japanese Kanji and Kana Quiz for Koreans**
 
-[Practice your Japanese Kana and Kanji knowledge!](https://jpnz-quiz.netlify.app/)
+[Practice your Japanese Kana and Kanji knowledge!](https://jpnz.netlify.app/)
