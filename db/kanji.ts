@@ -394,7 +394,7 @@ export const kanjiDB = [
   {
     "character": "降",
     "grade": "6",
-    "meaningKR": "내릴 강/항복할 항",
+    "meaningKR": "내릴 강",
     "meaningEN": "descend",
     "umdok": "こう",
     "hundok": "おりる、おろす、ふる"
@@ -866,7 +866,7 @@ export const kanjiDB = [
   {
     "character": "径",
     "grade": "4",
-    "meaningKR": "지름길/ 길 경",
+    "meaningKR": "지름길 경",
     "meaningEN": "diameter",
     "umdok": "けい",
     "hundok": null
@@ -898,7 +898,7 @@ export const kanjiDB = [
   {
     "character": "経",
     "grade": "5",
-    "meaningKR": "지날/ 글 경",
+    "meaningKR": "지날 경",
     "meaningEN": "manage",
     "umdok": "けい、きょう",
     "hundok": "へる"
@@ -906,7 +906,7 @@ export const kanjiDB = [
   {
     "character": "耕",
     "grade": "5",
-    "meaningKR": "밭 갈 경",
+    "meaningKR": "밭갈 경",
     "meaningEN": "till",
     "umdok": "こう",
     "hundok": "たがやす"
@@ -2042,7 +2042,7 @@ export const kanjiDB = [
   {
     "character": "窮",
     "grade": "S",
-    "meaningKR": "다할/ 궁할 궁",
+    "meaningKR": "궁할 궁",
     "meaningEN": "hard up",
     "umdok": "きゅう",
     "hundok": "きわめる、きわまる"
@@ -2386,7 +2386,7 @@ export const kanjiDB = [
   {
     "character": "汽",
     "grade": "2",
-    "meaningKR": "물 끓는 김 기",
+    "meaningKR": "물끓는김 기",
     "meaningEN": "steam",
     "umdok": "き",
     "hundok": null
@@ -3082,7 +3082,7 @@ export const kanjiDB = [
   {
     "character": "台",
     "grade": "2",
-    "meaningKR": "대 대/ 태풍 태",
+    "meaningKR": "별 태",
     "meaningEN": "pedestal",
     "umdok": "だい、たい",
     "hundok": null
@@ -3626,7 +3626,7 @@ export const kanjiDB = [
   {
     "character": "楽",
     "grade": "2",
-    "meaningKR": "즐길 락/노래 악",
+    "meaningKR": "즐길 락",
     "meaningEN": "pleasure",
     "umdok": "らく、がく",
     "hundok": "たのしい、たのしむ"
@@ -4370,7 +4370,7 @@ export const kanjiDB = [
   {
     "character": "率",
     "grade": "5",
-    "meaningKR": "비율 률/거느릴 솔",
+    "meaningKR": "비율 률",
     "meaningEN": "rate",
     "umdok": "りつ、そつ",
     "hundok": "ひきいる"
@@ -6170,7 +6170,7 @@ export const kanjiDB = [
   {
     "character": "復",
     "grade": "5",
-    "meaningKR": "회복할 복/ 다시 부",
+    "meaningKR": "회복할 복",
     "meaningEN": "again",
     "umdok": "ふく",
     "hundok": null
@@ -6474,7 +6474,7 @@ export const kanjiDB = [
   {
     "character": "北",
     "grade": "2",
-    "meaningKR": "북녘 북/ 달아날 배",
+    "meaningKR": "북녘 북",
     "meaningEN": "north",
     "umdok": "ほく",
     "hundok": "きた"
@@ -6562,7 +6562,7 @@ export const kanjiDB = [
   {
     "character": "不",
     "grade": "4",
-    "meaningKR": "아니 불/ 아니 부",
+    "meaningKR": "아니 부",
     "meaningEN": "non-",
     "umdok": "ふ、ぶ",
     "hundok": null
@@ -7114,7 +7114,7 @@ export const kanjiDB = [
   {
     "character": "殺",
     "grade": "5",
-    "meaningKR": "죽일 살/ 덜 쇄",
+    "meaningKR": "죽일 살",
     "meaningEN": "kill",
     "umdok": "さつ、さい、せつ",
     "hundok": "ころす"
@@ -7218,7 +7218,7 @@ export const kanjiDB = [
   {
     "character": "状",
     "grade": "5",
-    "meaningKR": "형상 상/ 문서 장",
+    "meaningKR": "형상 상",
     "meaningEN": "form",
     "umdok": "じょう",
     "hundok": null
@@ -7658,7 +7658,7 @@ export const kanjiDB = [
   {
     "character": "説",
     "grade": "4",
-    "meaningKR": "말씀 설/ 달랠 세",
+    "meaningKR": "말씀 설",
     "meaningEN": "theory",
     "umdok": "せつ、ぜい",
     "hundok": "とく"
@@ -7730,7 +7730,7 @@ export const kanjiDB = [
   {
     "character": "省",
     "grade": "4",
-    "meaningKR": "살필 성/ 덜 생",
+    "meaningKR": "살필 성",
     "meaningEN": "government ministry",
     "umdok": "せい、しょう",
     "hundok": "かえりみる、はぶく"
@@ -7802,7 +7802,7 @@ export const kanjiDB = [
   {
     "character": "世",
     "grade": "3",
-    "meaningKR": "인간/ 세상 세",
+    "meaningKR": "세상 세",
     "meaningEN": "world",
     "umdok": "せい、せ",
     "hundok": "よ"
@@ -7906,7 +7906,7 @@ export const kanjiDB = [
   {
     "character": "素",
     "grade": "5",
-    "meaningKR": "본디/ 흴 소",
+    "meaningKR": "흴 소",
     "meaningEN": "elementary",
     "umdok": "す、そ",
     "hundok": null
@@ -8546,7 +8546,7 @@ export const kanjiDB = [
   {
     "character": "拾",
     "grade": "3",
-    "meaningKR": "주울 습/ 열 십",
+    "meaningKR": "주울 습",
     "meaningEN": "pick up",
     "umdok": "しゅう",
     "hundok": "ひろう"
@@ -8730,7 +8730,7 @@ export const kanjiDB = [
   {
     "character": "食",
     "grade": "2",
-    "meaningKR": "밥/ 먹을 식",
+    "meaningKR": "먹을 식",
     "meaningEN": "eat, meal",
     "umdok": "しょく、じき",
     "hundok": "たべる、くう、くらう"
@@ -8994,7 +8994,7 @@ export const kanjiDB = [
   {
     "character": "氏",
     "grade": "4",
-    "meaningKR": "각시/ 성씨 씨",
+    "meaningKR": "성씨 씨",
     "meaningEN": "family name",
     "umdok": "し",
     "hundok": "うじ"
@@ -9058,7 +9058,7 @@ export const kanjiDB = [
   {
     "character": "悪",
     "grade": "3",
-    "meaningKR": "악할 악/ 미워할 오",
+    "meaningKR": "악할 악",
     "meaningEN": "bad",
     "umdok": "あく、お",
     "hundok": "わるい"
@@ -9354,7 +9354,7 @@ export const kanjiDB = [
   {
     "character": "洋",
     "grade": "3",
-    "meaningKR": "큰 바다 양",
+    "meaningKR": "큰바다 양",
     "meaningEN": "ocean",
     "umdok": "よう",
     "hundok": null
@@ -9450,7 +9450,7 @@ export const kanjiDB = [
   {
     "character": "漁",
     "grade": "4",
-    "meaningKR": "고기 잡을 어",
+    "meaningKR": "고기잡을 어",
     "meaningEN": "fishing",
     "umdok": "ぎょ、きょう",
     "hundok": null
@@ -9522,7 +9522,7 @@ export const kanjiDB = [
   {
     "character": "余",
     "grade": "5",
-    "meaningKR": "나/ 남을 여",
+    "meaningKR": "나 여",
     "meaningEN": "leave over",
     "umdok": "よ",
     "hundok": "あまる、あます"
@@ -9562,7 +9562,7 @@ export const kanjiDB = [
   {
     "character": "易",
     "grade": "5",
-    "meaningKR": "바꿀 역/ 쉬울 이",
+    "meaningKR": "바꿀 역",
     "meaningEN": "easy",
     "umdok": "えき、い",
     "hundok": "やさしい"
@@ -9642,7 +9642,7 @@ export const kanjiDB = [
   {
     "character": "沿",
     "grade": "6",
-    "meaningKR": "물 따라갈 연",
+    "meaningKR": "물따라갈 연",
     "meaningEN": "run alongside",
     "umdok": "えん",
     "hundok": "そう"
@@ -9850,7 +9850,7 @@ export const kanjiDB = [
   {
     "character": "預",
     "grade": "6",
-    "meaningKR": "맡길/ 미리 예",
+    "meaningKR": "맡길 예",
     "meaningEN": "deposit",
     "umdok": "よ",
     "hundok": "あずける、あずかる"
@@ -10202,7 +10202,7 @@ export const kanjiDB = [
   {
     "character": "欲",
     "grade": "6",
-    "meaningKR": "하고자 할 욕",
+    "meaningKR": "하고자할 욕",
     "meaningEN": "longing",
     "umdok": "よく",
     "hundok": "ほっする、ほしい"
@@ -11970,7 +11970,7 @@ export const kanjiDB = [
   {
     "character": "田",
     "grade": "1",
-    "meaningKR": "밭/ 논 전",
+    "meaningKR": "밭 전",
     "meaningEN": "rice paddy",
     "umdok": "でん",
     "hundok": "た"
@@ -12106,7 +12106,7 @@ export const kanjiDB = [
   {
     "character": "切",
     "grade": "2",
-    "meaningKR": "끊을 절/ 모두 체",
+    "meaningKR": "끊을 절",
     "meaningEN": "cut",
     "umdok": "せつ、さい",
     "hundok": "きる、きれる"
@@ -12210,7 +12210,7 @@ export const kanjiDB = [
   {
     "character": "丁",
     "grade": "3",
-    "meaningKR": "고무래/ 장정 정",
+    "meaningKR": "장정 정",
     "meaningEN": "ward",
     "umdok": "ちょう、てい",
     "hundok": null
@@ -12274,7 +12274,7 @@ export const kanjiDB = [
   {
     "character": "程",
     "grade": "5",
-    "meaningKR": "한도/ 길 정",
+    "meaningKR": "한도 정",
     "meaningEN": "extent",
     "umdok": "てい",
     "hundok": "ほど"
@@ -13602,7 +13602,7 @@ export const kanjiDB = [
   {
     "character": "車",
     "grade": "1",
-    "meaningKR": "수레 차/수레 거",
+    "meaningKR": "수레 차",
     "meaningEN": "car",
     "umdok": "しゃ",
     "hundok": "くるま"
@@ -13610,7 +13610,7 @@ export const kanjiDB = [
   {
     "character": "茶",
     "grade": "2",
-    "meaningKR": "차 차/차 다",
+    "meaningKR": "차 차",
     "meaningEN": "tea",
     "umdok": "ちゃ、さ",
     "hundok": null
@@ -13738,7 +13738,7 @@ export const kanjiDB = [
   {
     "character": "参",
     "grade": "4",
-    "meaningKR": "참여할 참/석 삼",
+    "meaningKR": "참여할 참",
     "meaningEN": "participate",
     "umdok": "さん",
     "hundok": "まいる"
@@ -14378,7 +14378,7 @@ export const kanjiDB = [
   {
     "character": "追",
     "grade": "3",
-    "meaningKR": "쫓을/따를 추",
+    "meaningKR": "따를 추",
     "meaningEN": "follow",
     "umdok": "つい",
     "hundok": "おう"
@@ -15330,7 +15330,7 @@ export const kanjiDB = [
   {
     "character": "便",
     "grade": "4",
-    "meaningKR": "편할 편/오줌 변",
+    "meaningKR": "편할 편",
     "meaningEN": "convenience",
     "umdok": "べん、びん",
     "hundok": "たより"
@@ -15402,7 +15402,7 @@ export const kanjiDB = [
   {
     "character": "陛",
     "grade": "6",
-    "meaningKR": "대궐 섬돌 폐",
+    "meaningKR": "대궐섬돌 폐",
     "meaningEN": "highness",
     "umdok": "へい",
     "hundok": null
@@ -15602,7 +15602,7 @@ export const kanjiDB = [
   {
     "character": "俵",
     "grade": "6",
-    "meaningKR": "나누어 줄 표",
+    "meaningKR": "나누어줄 표",
     "meaningEN": "bag",
     "umdok": "ひょう",
     "hundok": "たわら"
@@ -16506,7 +16506,7 @@ export const kanjiDB = [
   {
     "character": "画",
     "grade": "2",
-    "meaningKR": "그림 화/그을 획",
+    "meaningKR": "그림 화",
     "meaningEN": "tableau",
     "umdok": "が、かく",
     "hundok": null
@@ -17066,7 +17066,7 @@ export const kanjiDB = [
   {
     "character": "畑",
     "grade": "3",
-    "meaningKR": "(일본한자)밭",
+    "meaningKR": "화전 밭",
     "meaningEN": "farm",
     "umdok": null,
     "hundok": "はた、はたけ"
