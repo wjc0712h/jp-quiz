@@ -1,5 +1,5 @@
-# JP Quiz
+### 일본어 공부 시작  
+11/21/2025
 
-**Japanese Kanji and Kana Quiz for Koreans**
-
-[Practice your Japanese Kana and Kanji knowledge!](https://jpnz.netlify.app/)
+* website to practice `hiragana` / `katakana` / `kanji`: [jpnz.netlify.app](https://jpnz.netlify.app/)
+* japanese core words: `words/index.html`

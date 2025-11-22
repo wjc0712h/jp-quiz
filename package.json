@@ -6,11 +6,15 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "typescript": "npx tsc --watch"
+    "typescript": "npx tsc --watch",
+    "getdata": "node words/getwords.js"
   },
   "author": "",
   "license": "MIT",
   "devDependencies": {
     "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "puppeteer": "^24.31.0"
   }
 }

@@ -1,0 +1,141 @@
+// Japanese Core 1000 Scraper + Papago Korean Translation
+
+import * as fs from 'fs';
+import * as path from 'path';
+import puppeteer from 'puppeteer';
+
+// Core 1000 URLs
+const core1000 = {
+  core1: "https://iknow.jp/courses/566921",
+  core2: "https://iknow.jp/courses/566922",
+  core3: "https://iknow.jp/courses/566924",
+  core4: "https://iknow.jp/courses/566925",
+  core5: "https://iknow.jp/courses/566926",
+  core6: "https://iknow.jp/courses/566927",
+  core7: "https://iknow.jp/courses/566928",
+  core8: "https://iknow.jp/courses/566929",
+  core9: "https://iknow.jp/courses/566930",
+  core10: "https://iknow.jp/courses/566932",
+};
+
+const core2000 = {
+  core1: "https://iknow.jp/courses/594768",
+  core2: "https://iknow.jp/courses/594770",
+  core3: "https://iknow.jp/courses/594771",
+  core4: "https://iknow.jp/courses/594772",
+  core5: "https://iknow.jp/courses/594773",
+  core6: "https://iknow.jp/courses/594774",
+  core7: "https://iknow.jp/courses/594775",
+  core8: "https://iknow.jp/courses/594777",
+  core9: "https://iknow.jp/courses/594778",
+  core10: "https://iknow.jp/courses/594780",
+}
+
+const core3000 = {
+  core1: "https://iknow.jp/courses/615865",
+  core2: "https://iknow.jp/courses/615866",
+  core3: "https://iknow.jp/courses/615867",
+  core4: "https://iknow.jp/courses/615869",
+  core5: "https://iknow.jp/courses/615871",
+  core6: "https://iknow.jp/courses/615872",
+  core7: "https://iknow.jp/courses/615873",
+  core8: "https://iknow.jp/courses/615874",
+  core9: "https://iknow.jp/courses/615876",
+  core10: "https://iknow.jp/courses/615877",
+}
+// 딜레이 함수
+function delay(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function translateToKorean(page, word) {
+  try {
+    const papagoUrl = `https://papago.naver.com/?sk=auto&tk=ko&st=${encodeURIComponent(word)}`;
+    await page.goto(papagoUrl, { waitUntil: "networkidle2", timeout: 10000 });
+
+
+    await page.waitForSelector("#txtTarget span", { timeout: 5000 });
+    
+    await delay(500);
+
+    const korean = await page.evaluate(() => {
+      const el = document.querySelector("#txtTarget span");
+      return el ? el.innerText.trim() : "";
+    });
+
+    return korean || "";
+  } catch (err) {
+    console.error(`   ⚠️  Translation failed for "${word}":`, err.message);
+    return "";
+  }
+}
+
+async function scrapeCourse(page, url) {
+  await page.goto(url, { waitUntil: "networkidle2" });
+
+  const result = await page.evaluate(() => {
+    const items = [...document.querySelectorAll(".item-details")];
+    return items.map(item => {
+      // 단어
+      const word = item.querySelector(".cue")?.innerText?.trim() || "";
+
+      // 읽기
+      let reading = item.querySelector(".transliteration")?.innerText?.trim() || "";
+      reading = reading.replace(/[\[\]]/g, "").trim();
+
+
+      const meaning = item.querySelector(".response")?.innerText?.trim() || "";
+
+      return { word, reading, meaning };
+    });
+  });
+
+  return result;
+}
+
+(async () => {
+  console.log("\nStarting Japanese Core 1000 Scraper with Korean Translation...\n");
+
+  const browser = await puppeteer.launch({ headless: false }); // headless: false로 디버깅
+  const page = await browser.newPage();
+  const papago = await browser.newPage(); // 파파고 전용 페이지
+
+  const output = {};
+
+  for (const [coreName, url] of Object.entries(core1000)) {
+    console.log(`\n📘 Fetching ${coreName} ...`);
+
+    try {
+      const items = await scrapeCourse(page, url);
+      console.log(`   -> ${items.length} items scraped`);
+
+      for (let item of items) {
+        console.log(`   Translating: ${item.word}`);
+        const koreanMeaning = await translateToKorean(papago, item.word);
+        item.korean = koreanMeaning;
+
+        await delay(300);
+      }
+
+      output[coreName] = items;
+
+      console.log(`   ✔ Completed ${coreName}`);
+    } catch (err) {
+      console.error(`❌ Failed scraping ${coreName}:`, err);
+    }
+  }
+
+  await browser.close();
+
+  const dirPath = "words/";
+  if (!fs.existsSync(dirPath)) fs.mkdirSync(dirPath);
+
+  const filePath = path.join(dirPath, "core1000.js");
+  
+  const jsContent = `const core1000 = ${JSON.stringify(output, null, 2)};`;
+  
+  fs.writeFileSync(filePath, jsContent, "utf-8");
+
+  console.log("\n💾 Saved to words/core1000.js");
+  console.log("🎉 Scraping Completed!\n");
+})();

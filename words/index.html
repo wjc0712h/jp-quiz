@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanese Core 1000 Vocabulary</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 60%;
+            margin-bottom: 30px;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f0f0f0;
+            font-weight: bold;
+        }
+        h2 {
+            margin-top: 30px;
+        }
+        .error {
+            color: red;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Japanese Core 1000 Vocabulary</h1>
+    <div id="content">Loading...</div>
+
+    <script src="core1000.js"></script>
+    <script>
+        function displayVocabulary(data) {
+            let html = '';
+            
+            // Loop through core1 to core10
+            for (let i = 1; i <= 10; i++) {
+                const key = `core${i}`;
+                if (data[key]) {
+                    html += `<h2>Core ${i}</h2>`;
+                    html += '<table>';
+                    html += '<tr><th>number</th><th>Word</th><th>Reading</th><th>Korean</th><th>Meaning</th></tr>';
+                    
+                    data[key].forEach((item,index) => {
+                        html += '<tr>';
+                        html += `<td>${(index +1) + ((i-1)*100)}</td>`;
+                        html += `<td>${item.word}</td>`;
+                        html += `<td>${item.reading}</td>`;
+                        html += `<td>${item.korean}</td>`;
+                        html += `<td>${item.meaning}</td>`;
+                        html += '</tr>';
+                    });
+                    
+                    html += '</table>';
+                }
+            }
+            
+            document.getElementById('content').innerHTML = html;
+        }
+
+        displayVocabulary(core1000);
+    </script>
+</body>
+</html> 
