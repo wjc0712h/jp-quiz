@@ -3,11 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Japanese Core 1000 Vocabulary</title>
+    <title>Japanese Core Vocabulary</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
+        }
+        .button-container {
+            margin: 20px 0;
+        }
+        .vocab-button {
+            padding: 10px 20px;
+            margin-right: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        .vocab-button:hover {
+            background-color: #45a049;
+        }
+        .vocab-button.active {
+            background-color: #2196F3;
         }
         table {
             border-collapse: collapse;
@@ -33,11 +52,38 @@
     </style>
 </head>
 <body>
-    <h1>Japanese Core 1000 Vocabulary</h1>
+    <h1>Japanese Core Vocabulary</h1>
+    <div class="button-container">
+        <button class="vocab-button active" onclick="loadVocab('core1000', this)">Core 1000</button>
+        <button class="vocab-button" onclick="loadVocab('core2000', this)">Core 2000</button>
+        <button class="vocab-button" onclick="loadVocab('core3000', this)">Core 3000</button>
+    </div>
     <div id="content">Loading...</div>
 
     <script src="core1000.js"></script>
+    <script src="core2000.js"></script>
+    <script src="core3000.js"></script>
     <script>
+        function loadVocab(vocabType, buttonElement) {
+            // Update button styles
+            document.querySelectorAll('.vocab-button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            buttonElement.classList.add('active');
+            
+            // Load appropriate vocabulary
+            let data;
+            if (vocabType === 'core1000') {
+                data = core1000;
+            } else if (vocabType === 'core2000') {
+                data = core2000;
+            } else if (vocabType === 'core3000') {
+                data = core3000;
+            }
+            
+            displayVocabulary(data);
+        }
+
         function displayVocabulary(data) {
             let html = '';
             
@@ -49,9 +95,9 @@
                     html += '<table>';
                     html += '<tr><th>number</th><th>Word</th><th>Reading</th><th>Korean</th><th>Meaning</th></tr>';
                     
-                    data[key].forEach((item,index) => {
+                    data[key].forEach((item, index) => {
                         html += '<tr>';
-                        html += `<td>${(index +1) + ((i-1)*100)}</td>`;
+                        html += `<td>${(index + 1) + ((i - 1) * 100)}</td>`;
                         html += `<td>${item.word}</td>`;
                         html += `<td>${item.reading}</td>`;
                         html += `<td>${item.korean}</td>`;
@@ -66,7 +112,8 @@
             document.getElementById('content').innerHTML = html;
         }
 
+        // Load default vocabulary (core1000)
         displayVocabulary(core1000);
     </script>
 </body>
-</html> 
+</html>

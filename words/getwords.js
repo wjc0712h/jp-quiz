@@ -1,10 +1,7 @@
-// Japanese Core 1000 Scraper + Papago Korean Translation
-
 import * as fs from 'fs';
 import * as path from 'path';
 import puppeteer from 'puppeteer';
 
-// Core 1000 URLs
 const core1000 = {
   core1: "https://iknow.jp/courses/566921",
   core2: "https://iknow.jp/courses/566922",
@@ -43,7 +40,12 @@ const core3000 = {
   core9: "https://iknow.jp/courses/615876",
   core10: "https://iknow.jp/courses/615877",
 }
-// 딜레이 함수
+
+const fileName = "core3000.js";
+const variableName = "core3000";
+const entriesName = core3000;
+
+
 function delay(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -56,7 +58,7 @@ async function translateToKorean(page, word) {
 
     await page.waitForSelector("#txtTarget span", { timeout: 5000 });
     
-    await delay(500);
+    await delay(300);
 
     const korean = await page.evaluate(() => {
       const el = document.querySelector("#txtTarget span");
@@ -94,7 +96,7 @@ async function scrapeCourse(page, url) {
 }
 
 (async () => {
-  console.log("\nStarting Japanese Core 1000 Scraper with Korean Translation...\n");
+  console.log(`\nStarting ${variableName} Scraper with Korean Translation...\n`);
 
   const browser = await puppeteer.launch({ headless: false }); // headless: false로 디버깅
   const page = await browser.newPage();
@@ -102,7 +104,7 @@ async function scrapeCourse(page, url) {
 
   const output = {};
 
-  for (const [coreName, url] of Object.entries(core1000)) {
+  for (const [coreName, url] of Object.entries(entriesName)) {
     console.log(`\n📘 Fetching ${coreName} ...`);
 
     try {
@@ -130,12 +132,12 @@ async function scrapeCourse(page, url) {
   const dirPath = "words/";
   if (!fs.existsSync(dirPath)) fs.mkdirSync(dirPath);
 
-  const filePath = path.join(dirPath, "core1000.js");
+  const filePath = path.join(dirPath, fileName);
   
-  const jsContent = `const core1000 = ${JSON.stringify(output, null, 2)};`;
+  const jsContent = `const ${variableName} = ${JSON.stringify(output, null, 2)};`;
   
   fs.writeFileSync(filePath, jsContent, "utf-8");
 
-  console.log("\n💾 Saved to words/core1000.js");
+  console.log(`\n💾 Saved to words/${fileName}`);
   console.log("🎉 Scraping Completed!\n");
 })();

@@ -3,3 +3,5 @@
 
 * website to practice `hiragana` / `katakana` / `kanji`: [jpnz.netlify.app](https://jpnz.netlify.app/)
 * japanese core words: `words/index.html`
+    - core1000
+    - core2000
