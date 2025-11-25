@@ -2,3 +2,7 @@ dist/
 node_modules/
 deploy/
 .DS_Store
+
+core1000.js
+core2000.js
+core3000.js

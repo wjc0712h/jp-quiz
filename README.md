@@ -5,3 +5,4 @@
 * japanese core words: `words/index.html`
     - core1000
     - core2000
+    - core3000
