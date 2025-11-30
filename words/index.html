@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flashcard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         * {
             box-sizing: border-box;
@@ -14,6 +15,12 @@
             padding: 15px;
             max-width: 100%;
             overflow-x: hidden;
+            overflow-y: scroll;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* IE and Edge */
+        }
+        body::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera */
         }
         h1 {
             font-size: clamp(20px, 5vw, 28px);
@@ -46,7 +53,7 @@
             padding: 10px 15px;
             font-size: clamp(14px, 3vw, 16px);
             cursor: pointer;
-            background-color: #FF9800;
+            background-color: #4CAF50;
             color: white;
             border: none;
             border-radius: 5px;
@@ -54,10 +61,10 @@
             min-width: 80px;
         }
         .mode-button:hover {
-            background-color: #F57C00;
+            background-color: #45a049;
         }
         .mode-button.active {
-            background-color: #E91E63;
+            background-color: #2196F3;
         }
         
         .flashcard-container {
@@ -68,8 +75,8 @@
             width: 100%;
         }
         .flashcard {
-            width: min(500px, 95vw);
-            height: min(300px, 60vh);
+            width: min(700px, 95vw);
+            height: min(400px, 60vh);
             background: white;
             border: 2px solid #333;
             border-radius: 15px;
@@ -82,6 +89,13 @@
             transition: transform 0.3s;
             padding: 20px;
             position: relative;
+        }
+        
+        @media (min-width: 768px) {
+            .flashcard {
+                width: 700px;
+                height: 400px;
+            }
         }
         .flashcard:hover {
             transform: scale(1.02);
@@ -97,7 +111,7 @@
             color: #666;
         }
         .card-word {
-            font-size: clamp(32px, 8vw, 48px);
+            font-size: clamp(40px, 10vw, 64px);
             font-weight: bold;
             margin-bottom: 10px;
             text-align: center;
@@ -110,15 +124,16 @@
             text-align: center;
         }
         .card-meaning {
-            font-size: clamp(22px, 5vw, 28px);
-            color: #333;
+            font-size: clamp(32px, 8vw, 48px);
+            font-weight: bold;
             margin-bottom: 10px;
             text-align: center;
             word-break: break-word;
         }
         .card-english {
-            font-size: clamp(16px, 3.5vw, 20px);
+            font-size: clamp(18px, 4vw, 24px);
             color: #666;
+            margin-bottom: 20px;
             text-align: center;
         }
         .flashcard-controls {
@@ -220,9 +235,9 @@
         .audio-btn {
             position: absolute;
             top: 10px;
-            right: 10px;
-            padding: 8px 10px;
-            font-size: clamp(16px, 3vw, 20px);
+            right: 45px;
+            padding: 6px 8px;
+            font-size: clamp(12px, 2.5vw, 16px);
             cursor: pointer;
             border: none;
             border-radius: 5px;
@@ -234,6 +249,90 @@
         }
         .audio-btn:hover {
             background-color: #000000;
+        }
+        .save-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 6px 8px;
+            font-size: clamp(12px, 2.5vw, 16px);
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #FFC107;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .save-btn:hover {
+            background-color: #FFA000;
+        }
+        .save-btn.saved {
+            background-color: #4CAF50;
+        }
+        .saved-words-section {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            border: 2px solid #ddd;
+        }
+        .saved-words-section h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        .saved-word-item {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .saved-word-content {
+            flex: 1;
+        }
+        .saved-word-japanese {
+            font-size: clamp(20px, 4vw, 24px);
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .saved-word-reading {
+            font-size: clamp(14px, 3vw, 16px);
+            color: #666;
+            margin-bottom: 5px;
+        }
+        .saved-word-meaning {
+            font-size: clamp(16px, 3vw, 18px);
+            color: #333;
+        }
+        .delete-btn {
+            padding: 8px 12px;
+            background-color: #f44336;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: clamp(12px, 2.5vw, 14px);
+        }
+        .delete-btn:hover {
+            background-color: #d32f2f;
+        }
+        .clear-all-btn {
+            padding: 10px 20px;
+            background-color: #f44336;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: clamp(14px, 3vw, 16px);
+            margin-top: 10px;
+        }
+        .clear-all-btn:hover {
+            background-color: #d32f2f;
         }
         .settings-control {
             margin-top: 20px;
@@ -281,7 +380,8 @@
         <div class="flashcard-container">
             <div class="flashcard" id="flashcard" onclick="flipCard()">
                 <div class="card-number" id="cardNumber"></div>
-                <button class="audio-btn" onclick="playAudio(event)">🔊</button>
+                <button class="audio-btn" onclick="playAudio(event)"><i class="fa-solid fa-volume-high"></i></button>
+                <button class="save-btn" id="saveBtn" onclick="toggleSaveWord(event)"><i class="fa-solid fa-bookmark"></i></button>
                 <div id="cardFront">
                     <div class="card-word" id="cardWord"></div>
                     <div class="card-reading" id="cardReading"></div>
@@ -293,9 +393,9 @@
             </div>
             
             <div class="flashcard-controls">
-                <button class="control-btn" onclick="prevCard()" id="prevBtn">←</button>
-                <button class="control-btn" onclick="toggleAutoPlay()" id="autoPlayBtn">▶</button>
-                <button class="control-btn" onclick="nextCard()" id="nextBtn">→</button>
+                <button class="control-btn" onclick="prevCard()" id="prevBtn"><i class="fa-solid fa-arrow-left-long"></i></button>
+                <button class="control-btn" onclick="toggleAutoPlay()" id="autoPlayBtn"><i class="fa-solid fa-play"></i></button>
+                <button class="control-btn" onclick="nextCard()" id="nextBtn"><i class="fa-solid fa-arrow-right-long"></i></i></button>
             </div>
             
             <div class="speed-control">
@@ -305,8 +405,8 @@
             </div>
             
             <div class="settings-control">
-                <input type="checkbox" id="autoAudioCheck" checked>
                 <label class="checkbox-label" for="autoAudioCheck">自動音声再生</label>
+                <input type="checkbox" id="autoAudioCheck" checked>
             </div>
             
             <div class="progress" id="progress"></div>
@@ -314,6 +414,13 @@
     </div>
     
     <div id="table-view" class="table-view"></div>
+    
+    <div id="saved-words-section" class="saved-words-section" style="display:none;">
+        <h2>単語帳 (<span id="savedCount">0</span>)</h2>
+        <button class="clear-all-btn" onclick="clearAllSaved()">Clear All</button>
+        <div id="saved-words-list"></div>
+    </div>
+    
     <script src="core1000.js"></script>
     <script src="core2000.js"></script>
     <script src="core3000.js"></script>
@@ -328,6 +435,7 @@
         let autoPlaySpeed = 1000;
         let speechSynthesis = window.speechSynthesis;
         let japaneseVoice = null;
+        let savedWords = [];
 
         function initVoice() {
             const voices = speechSynthesis.getVoices();
@@ -426,6 +534,89 @@
             if (document.getElementById('autoAudioCheck').checked) {
                 setTimeout(() => playAudio(), 100);
             }
+            
+            updateSaveButton();
+        }
+
+        function updateSaveButton() {
+            const word = allWords[currentIndex];
+            const wordKey = `${currentVocab}-${word.number}`;
+            const isSaved = savedWords.some(w => `${w.vocab}-${w.number}` === wordKey);
+            const saveBtn = document.getElementById('saveBtn');
+            
+            if (isSaved) {
+                saveBtn.classList.add('saved');
+                saveBtn.innerHTML = '<i class="fa-solid fa-bookmark"></i>';
+            } else {
+                saveBtn.classList.remove('saved');
+                saveBtn.innerHTML = '<i class="fa-regular fa-bookmark"></i>';
+            }
+        }
+
+        function toggleSaveWord(event) {
+            event.stopPropagation();
+            
+            if (allWords.length === 0) return;
+            
+            const word = allWords[currentIndex];
+            const wordKey = `${currentVocab}-${word.number}`;
+            const existingIndex = savedWords.findIndex(w => `${w.vocab}-${w.number}` === wordKey);
+            
+            if (existingIndex !== -1) {
+                savedWords.splice(existingIndex, 1);
+            } else {
+                savedWords.push({ ...word, vocab: currentVocab });
+            }
+            
+            updateSaveButton();
+            displaySavedWords();
+        }
+
+        function displaySavedWords() {
+            const section = document.getElementById('saved-words-section');
+            const list = document.getElementById('saved-words-list');
+            const count = document.getElementById('savedCount');
+            
+            if (savedWords.length === 0) {
+                section.style.display = 'none';
+                return;
+            }
+            
+            section.style.display = 'block';
+            count.textContent = savedWords.length;
+            
+            let html = '';
+            savedWords.forEach((word, index) => {
+                const vocabLabel = word.vocab === 'core1000' ? 'Core 1000' : word.vocab === 'core2000' ? 'Core 2000' : 'Core 3000';
+                html += `
+                    <div class="saved-word-item">
+                        <div class="saved-word-content">
+                            <div class="saved-word-japanese">${word.word} <span style="font-size: 14px; color: #999;">(${vocabLabel} #${word.number})</span></div>
+                            <div class="saved-word-reading">${word.reading}</div>
+                            <div class="saved-word-meaning">${word.korean} - ${word.meaning}</div>
+                        </div>
+                        <button class="delete-btn" onclick="deleteSavedWord(${index})">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </div>
+                `;
+            });
+            
+            list.innerHTML = html;
+        }
+
+        function deleteSavedWord(index) {
+            savedWords.splice(index, 1);
+            displaySavedWords();
+            updateSaveButton();
+        }
+
+        function clearAllSaved() {
+            if (confirm('Are you sure you want to clear all saved words?')) {
+                savedWords = [];
+                displaySavedWords();
+                updateSaveButton();
+            }
         }
 
         function flipCard() {
@@ -464,7 +655,7 @@
         }
 
         function startAutoPlay() {
-            document.getElementById('autoPlayBtn').textContent = '⏸';
+            document.getElementById('autoPlayBtn').innerHTML = `<i class="fa-solid fa-pause"></i>`;
             autoPlayInterval = setInterval(() => {
                 if (!isFlipped) {
                     flipCard();
@@ -482,7 +673,7 @@
             if (autoPlayInterval) {
                 clearInterval(autoPlayInterval);
                 autoPlayInterval = null;
-                document.getElementById('autoPlayBtn').textContent = '▶';
+                document.getElementById('autoPlayBtn').innerHTML = `<i class="fa-solid fa-play"></i>`;
             }
         }
 
@@ -561,28 +752,23 @@
             speechSynthesis.speak(utterance);
         }
 
-        // 키보드 이벤트 리스너 추가
         document.addEventListener('keydown', function(event) {
-            // 입력 필드에서 타이핑 중일 때는 무시
             if (event.target.tagName === 'INPUT' || event.target.tagName === 'TEXTAREA') {
                 return;
             }
             
-            // 스페이스바: 카드 뒤집기 또는 자동재생
             if (event.code === 'Space') {
-                event.preventDefault(); // 페이지 스크롤 방지
+                event.preventDefault();
                 if (currentMode === 'flashcard') {
                     toggleAutoPlay();
                 }
             }
-            // 왼쪽 화살표: 이전 카드
             else if (event.code === 'ArrowLeft') {
                 event.preventDefault();
                 if (currentMode === 'flashcard') {
                     prevCard();
                 }
             }
-            // 오른쪽 화살표: 다음 카드
             else if (event.code === 'ArrowRight') {
                 event.preventDefault();
                 if (currentMode === 'flashcard') {
@@ -594,8 +780,8 @@
                 if (currentMode === 'flashcard') {
                     flipCard();
                 }
-        }
-    });
+            }
+        });
 
         currentData = core1000;
         prepareWordList();
