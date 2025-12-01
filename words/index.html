@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flashcard</title>
+    <title>jpcorewords</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         * {
@@ -273,14 +273,23 @@
         }
         .saved-words-section {
             margin-top: 40px;
-            padding: 20px;
+            padding: 10px;
             background-color: #f9f9f9;
             border-radius: 10px;
             border: 2px solid #ddd;
         }
-        .saved-words-section h2 {
-            margin-top: 0;
-            color: #333;
+        .saved-words-section-header {
+            color: white;
+            background: #2196F3;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .saved-words-section-header h2,.saved-words-section-header button {
+            margin: 0;
         }
         .saved-word-item {
             background: white;
@@ -322,17 +331,16 @@
             background-color: #d32f2f;
         }
         .clear-all-btn {
-            padding: 10px 20px;
-            background-color: #f44336;
+            padding: 8px 12px;
+            background-color: #991910;
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-size: clamp(14px, 3vw, 16px);
-            margin-top: 10px;
+            font-size: clamp(12px, 2.5vw, 14px);
         }
         .clear-all-btn:hover {
-            background-color: #d32f2f;
+            background-color: #771111;
         }
         .settings-control {
             margin-top: 20px;
@@ -367,10 +375,13 @@
         <button class="vocab-button active" onclick="loadVocab('core1000', this)">Core 1000</button>
         <button class="vocab-button" onclick="loadVocab('core2000', this)">Core 2000</button>
         <button class="vocab-button" onclick="loadVocab('core3000', this)">Core 3000</button>
+        <button class="vocab-button" onclick="loadVocab('core4000', this)">Core 4000</button>
+        <button class="vocab-button" onclick="loadVocab('core5000', this)">Core 5000</button>
+        <button class="vocab-button" onclick="loadVocab('core6000', this)">Core 6000</button>
     </div>
     
     <div class="button-container">
-        <button class="mode-button active" onclick="setMode('flashcard', this)">Flashcard</button>
+        <button class="mode-button active" onclick="setMode('flashcard', this)">flashcard</button>
         <button class="mode-button" onclick="setMode('showAll', this)">all</button>
         <button class="mode-button" onclick="setMode('hideJapanese', this)">definition</button>
         <button class="mode-button" onclick="setMode('hideMeaning', this)">words</button>
@@ -416,14 +427,19 @@
     <div id="table-view" class="table-view"></div>
     
     <div id="saved-words-section" class="saved-words-section" style="display:none;">
-        <h2>単語帳 (<span id="savedCount">0</span>)</h2>
-        <button class="clear-all-btn" onclick="clearAllSaved()">Clear All</button>
+        <div id="saved-words-section-header"class="saved-words-section-header">
+            <h2>単語帳 (<span id="savedCount">0</span>)</h2>
+            <button class="clear-all-btn" onclick="clearAllSaved()"><i class="fa-solid fa-trash"></i></button>
+        </div>
         <div id="saved-words-list"></div>
     </div>
     
     <script src="core1000.js"></script>
     <script src="core2000.js"></script>
     <script src="core3000.js"></script>
+    <script src="core4000.js"></script>
+    <script src="core5000.js"></script>
+    <script src="core6000.js"></script>
     <script>
         let currentVocab = 'core1000';
         let currentMode = 'flashcard';
@@ -464,6 +480,12 @@
                 currentData = core2000;
             } else if (vocabType === 'core3000') {
                 currentData = core3000;
+            } else if (vocabType === 'core4000') {
+                currentData = core4000;
+            } else if (vocabType === 'core5000') {
+                currentData = core5000;
+            } else if (vocabType === 'core6000') {
+                currentData = core6000;
             }
             
             prepareWordList();
@@ -554,7 +576,9 @@
         }
 
         function toggleSaveWord(event) {
-            event.stopPropagation();
+            if (event) {
+                event.stopPropagation();
+            }
             
             if (allWords.length === 0) return;
             
@@ -568,6 +592,7 @@
                 savedWords.push({ ...word, vocab: currentVocab });
             }
             
+            localStorage.setItem('savedWords', JSON.stringify(savedWords));
             updateSaveButton();
             displaySavedWords();
         }
@@ -587,7 +612,7 @@
             
             let html = '';
             savedWords.forEach((word, index) => {
-                const vocabLabel = word.vocab === 'core1000' ? 'Core 1000' : word.vocab === 'core2000' ? 'Core 2000' : 'Core 3000';
+                const vocabLabel = word.vocab === 'core1000' ? 'Core 1000' : word.vocab === 'core2000' ? 'Core 2000' : word.vocab === 'core3000' ? 'Core 3000' : word.vocab === 'core4000' ? 'Core 4000' : word.vocab === 'core5000' ? 'Core 5000' : 'Core 6000';
                 html += `
                     <div class="saved-word-item">
                         <div class="saved-word-content">
@@ -607,13 +632,15 @@
 
         function deleteSavedWord(index) {
             savedWords.splice(index, 1);
+            localStorage.setItem('savedWords', JSON.stringify(savedWords));
             displaySavedWords();
             updateSaveButton();
         }
 
         function clearAllSaved() {
-            if (confirm('Are you sure you want to clear all saved words?')) {
+            if (confirm("削除しますか？")) {
                 savedWords = [];
+                localStorage.setItem('savedWords', JSON.stringify(savedWords));
                 displaySavedWords();
                 updateSaveButton();
             }
@@ -781,11 +808,29 @@
                     flipCard();
                 }
             }
+            else if (event.code === 'KeyB') {
+                event.preventDefault();
+                if (currentMode === 'flashcard') {
+                    toggleSaveWord();
+                }
+            }
         });
 
         currentData = core1000;
         prepareWordList();
         showCard();
+        
+        // Load saved words from localStorage
+        const storedWords = localStorage.getItem('savedWords');
+        if (storedWords) {
+            try {
+                savedWords = JSON.parse(storedWords);
+                displaySavedWords();
+            } catch (e) {
+                console.error('Error loading saved words:', e);
+                savedWords = [];
+            }
+        }
     </script>
 </body>
 </html>

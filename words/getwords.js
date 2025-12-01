@@ -41,9 +41,48 @@ const core3000 = {
   core10: "https://iknow.jp/courses/615877",
 }
 
-const fileName = "core3000.js";
-const variableName = "core3000";
-const entriesName = core3000;
+const core4000 = {
+  core1: "https://iknow.jp/courses/615947",
+  core2: "https://iknow.jp/courses/615949",
+  core3: "https://iknow.jp/courses/615950",
+  core4: "https://iknow.jp/courses/615951",
+  core5: "https://iknow.jp/courses/615953",
+  core6: "https://iknow.jp/courses/615954",
+  core7: "https://iknow.jp/courses/615955",
+  core8: "https://iknow.jp/courses/615957",
+  core9: "https://iknow.jp/courses/615958",
+  core10: "https://iknow.jp/courses/615959",
+}
+
+const core5000 = {
+  core1: "https://iknow.jp/courses/616077",
+  core2: "https://iknow.jp/courses/616078",
+  core3: "https://iknow.jp/courses/616079",
+  core4: "https://iknow.jp/courses/616080",
+  core5: "https://iknow.jp/courses/616081",
+  core6: "https://iknow.jp/courses/616082",
+  core7: "https://iknow.jp/courses/616083",
+  core8: "https://iknow.jp/courses/616084",
+  core9: "https://iknow.jp/courses/616085",
+  core10: "https://iknow.jp/courses/616086",
+}
+
+const core6000 = {
+  core1: "https://iknow.jp/courses/598434",
+  core2: "https://iknow.jp/courses/598432",
+  core3: "https://iknow.jp/courses/598431",
+  core4: "https://iknow.jp/courses/598430",
+  core5: "https://iknow.jp/courses/598427",
+  core6: "https://iknow.jp/courses/598426",
+  core7: "https://iknow.jp/courses/598425",
+  core8: "https://iknow.jp/courses/598424",
+  core9: "https://iknow.jp/courses/598423",
+  core10: "https://iknow.jp/courses/598422",
+}
+
+const fileName = "core6000.js";
+const variableName = "core6000";
+const entriesName = core6000;
 
 
 function delay(ms) {
