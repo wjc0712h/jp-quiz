@@ -7,7 +7,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "typescript": "npx tsc --watch",
-    "getdata": "node words/getwords.js"
+    "getwords": "node jpcorewords/getwords.js",
+    "getsentences": "node jpcorewords/getsentences.js"
   },
   "author": "",
   "license": "MIT",

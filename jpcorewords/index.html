@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jpcorewords</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Japanese Core Vocabulary</h1>
+    
+    <div class="button-container">
+        <button class="vocab-button active" onclick="loadVocab('core1000', this)">Core 1000</button>
+        <button class="vocab-button" onclick="loadVocab('core2000', this)">Core 2000</button>
+        <button class="vocab-button" onclick="loadVocab('core3000', this)">Core 3000</button>
+        <button class="vocab-button" onclick="loadVocab('core4000', this)">Core 4000</button>
+        <button class="vocab-button" onclick="loadVocab('core5000', this)">Core 5000</button>
+        <button class="vocab-button" onclick="loadVocab('core6000', this)">Core 6000</button>
+    </div>
+    
+    <div class="button-container">
+        <button class="mode-button active" onclick="setMode('flashcard', this)">flashcard</button>
+        <button class="mode-button" onclick="setMode('showAll', this)">all</button>
+        <button class="mode-button" onclick="setMode('hideJapanese', this)">definition</button>
+        <button class="mode-button" onclick="setMode('hideMeaning', this)">words</button>
+    </div>
+    
+    <div id="flashcard-view" class="flashcard-view">
+        <div class="flashcard-container">
+            <div class="flashcard" id="flashcard" onclick="flipCard()">
+                <div class="card-number" id="cardNumber"></div>
+                <button class="audio-btn" onclick="playAudio(event)"><i class="fa-solid fa-volume-high"></i></button>
+                <button class="save-btn" id="saveBtn" onclick="toggleSaveWord(event)"><i class="fa-solid fa-bookmark"></i></button>
+                <div id="cardFront">
+                    <div class="card-word" id="cardWord"></div>
+                    <div class="card-reading" id="cardReading"></div>
+                </div>
+                <div id="cardBack" style="display:none;">
+                    <div class="card-meaning" id="cardMeaning"></div>
+                    <div class="card-english" id="cardEnglish"></div>
+                </div>
+            </div>
+        <div id="example-container" class="example-container">
+            <div id="example" class="example" onclick="playSentence(event)">
+                <div id ="example-icon" class="example-icon"><i class="fa-solid fa-volume-high"></i></div>
+                <div id="example-sentences" class="example-sentences"></div>
+            </div>
+        </div>
+            
+            <div class="flashcard-controls">
+                <button class="control-btn" onclick="prevCard()" id="prevBtn"><i class="fa-solid fa-arrow-left-long"></i></button>
+                <button class="control-btn" onclick="toggleAutoPlay()" id="autoPlayBtn"><i class="fa-solid fa-play"></i></button>
+                <button class="control-btn" onclick="nextCard()" id="nextBtn"><i class="fa-solid fa-arrow-right-long"></i></i></button>
+            </div>
+            
+            <div class="speed-control">
+                <button class="speed-btn" onclick="setSpeed(2000,this)">低速</button>
+                <button class="speed-btn active" onclick="setSpeed(1000,this)">標準</button>
+                <button class="speed-btn" onclick="setSpeed(500,this)">高速</button>
+            </div>
+            
+            <div class="settings-control">
+                <label class="checkbox-label" for="autoAudioCheck">自動音声再生</label>
+                <input type="checkbox" id="autoAudioCheck" checked>
+            </div>
+            
+            <div class="progress" id="progress"></div>
+        </div>
+    </div>
+    
+    <div id="table-view" class="table-view"></div>
+    
+    <div id="saved-words-section" class="saved-words-section" style="display:none;">
+        <div id="saved-words-section-header"class="saved-words-section-header">
+            <h2>単語帳 (<span id="savedCount">0</span>)</h2>
+            <button class="clear-all-btn" onclick="clearAllSaved()"><i class="fa-solid fa-trash"></i></button>
+        </div>
+        <div id="saved-words-list"></div>
+    </div>
+    
+
+    <!--CORE WORDS-->
+    <script src="words/core1000.js"></script>
+    <script src="words/core2000.js"></script>
+    <script src="words/core3000.js"></script>
+    <script src="words/core4000.js"></script>
+    <script src="words/core5000.js"></script>
+    <script src="words/core6000.js"></script>
+
+    <!--EXAMPLE SENTENCES-->
+    <script src="sentences/core1000_sentences.js"></script>
+    <script src="sentences/core2000_sentences.js"></script>
+    <script src="sentences/core3000_sentences.js"></script>
+    <script src="sentences/core4000_sentences.js"></script>
+    <script src="sentences/core5000_sentences.js"></script>
+    <script src="sentences/core6000_sentences.js"></script>
+    
+    <!--INDEX JS-->
+    <script src="index.js"></script>
+</body>
+</html>

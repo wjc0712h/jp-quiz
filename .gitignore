@@ -3,9 +3,6 @@ node_modules/
 deploy/
 .DS_Store
 
-core1000.js
-core2000.js
-core3000.js
-core4000.js
-core5000.js
-core6000.js
+
+words/
+sentences/
