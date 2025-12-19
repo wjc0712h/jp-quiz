@@ -109,10 +109,11 @@
             document.getElementById('cardMeaning').textContent = word.korean;
             document.getElementById('cardEnglish').textContent = word.meaning;
 
-            if (currentSentence != null)
-                document.getElementById('example-sentences').textContent = currentSentence[word.word].sentences
-            else
-                document.getElementById('example-sentences').textContent = ''
+            if (currentSentence && currentSentence[word.word] && currentSentence[word.word].sentences) {
+                document.getElementById('example-sentences').textContent = currentSentence[word.word].sentences;
+            } else {
+                document.getElementById('example-sentences').textContent = '';
+            }
 
             document.getElementById('cardFront').style.display = 'block';
             document.getElementById('cardBack').style.display = 'none';
@@ -311,21 +312,21 @@
                             html += `<td>${item.korean}</td>`;
                             html += `<td>${item.meaning}</td>`;
 
-                            if (currentSentence != null)
+                            if (currentSentence && currentSentence[item.word] && currentSentence[item.word].sentences)
                                 html += `<td>${currentSentence[item.word].sentences}</td>`;
                         } else if (currentMode === 'hideMeaning') {
                             html += `<td>${item.word}</td>`;
                             html += `<td>${item.reading}</td>`;
                             html += `<td class="hidden" onclick="this.classList.toggle('hidden')">${item.korean}</td>`;
                             html += `<td class="hidden" onclick="this.classList.toggle('hidden')">${item.meaning}</td>`;
-                            if (currentSentence != null)
+                            if (currentSentence && currentSentence[item.word] && currentSentence[item.word].sentences)
                                 html += `<td>${currentSentence[item.word].sentences}</td>`;
                         } else {
                             html += `<td>${item.word}</td>`;
                             html += `<td>${item.reading}</td>`;
                             html += `<td>${item.korean}</td>`;
                             html += `<td>${item.meaning}</td>`;
-                            if (currentSentence != null)
+                            if (currentSentence && currentSentence[item.word] && currentSentence[item.word].sentences)
                                 html += `<td>${currentSentence[item.word].sentences}</td>`;
                         }
                         
