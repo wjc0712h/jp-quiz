@@ -1,4 +1,4 @@
-        let currentVocab = 'core1000';
+let currentVocab = 'core1000';
         let currentMode = 'flashcard';
         let currentWord = null;
         let currentSentence = null;
@@ -121,8 +121,8 @@
             isFlipped = false;
             
             document.getElementById('progress').textContent = `Card ${currentIndex + 1} of ${allWords.length}`;
-            document.getElementById('prevBtn').disabled = currentIndex === 0;
-            document.getElementById('nextBtn').disabled = currentIndex === allWords.length - 1;
+            document.getElementById('prevBtn').disabled = false;
+            document.getElementById('nextBtn').disabled = false;
         
             if (document.getElementById('autoAudioCheck').checked) {
                 setTimeout(() => playAudio(), 100);
@@ -236,15 +236,19 @@
         function nextCard() {
             if (currentIndex < allWords.length - 1) {
                 currentIndex++;
-                showCard();
+            } else {
+                currentIndex = 0;
             }
+            showCard();
         }
 
         function prevCard() {
             if (currentIndex > 0) {
                 currentIndex--;
-                showCard();
+            } else {
+                currentIndex = allWords.length - 1;
             }
+            showCard();
         }
 
         function toggleAutoPlay() {
@@ -348,7 +352,8 @@
             if (allWords.length === 0) return;
             
             const word = allWords[currentIndex];
-            const utterance = new SpeechSynthesisUtterance(word.word);
+            const textToSpeak = word.reading || word.word;
+            const utterance = new SpeechSynthesisUtterance(textToSpeak);
             utterance.lang = 'ja-JP';
             utterance.rate = 1;
             
